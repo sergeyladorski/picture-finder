@@ -1,7 +1,5 @@
-const Input = ({placeholder, handleChange}) => {
+export const Input = (props) => {
     return (
-        <input className='input' placeholder={placeholder} onChange={handleChange}/>
+        <input className='input' {...props}/>
     )
 }
-
-export default Input;

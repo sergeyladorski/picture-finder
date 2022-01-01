@@ -1,15 +1,42 @@
 class Api {
-    constructor({baseUrl, accessKey}) {
-        this.baseUrl = baseUrl;
-        this.accessKey = accessKey;
+    constructor({ baseUrl, accessKey }) {
+        this._baseUrl = baseUrl;
+        this._accessKey = accessKey;
     }
+    static getResponse(res) {
+        return res.ok
+            ? res.json()
+            : Promise.reject(`Ошибка: ${res.status}`)
+    }
+
+    static transformPhotoData(item) {
+        return {
+            id: item.id,
+            src: item.urls.regular,
+            title: item.user.name,
+            subtitle: item.description,
+            alt: item.alt_description
+        }
+    }
+
     search(searchQuery) {
-        return fetch(`${this.baseUrl}/search/photos?query=${searchQuery}`, {
+        return fetch(`${this._baseUrl}/search/photos?query=${searchQuery}`, {
             headers: {
-                Authorization: `Client-ID ${this.accessKey}`
+                Authorization: `Client-ID ${this._accessKey}`
             }
         })
-        .then(res => res.ok? res.json() : Promise.reject(res.status))
+            .then(Api.getResponse)
+            .then(({ results }) => results.map(Api.transformPhotoData))
+    }
+
+    getPhotoById(id) {
+        return fetch(`${this._baseUrl}/photos/${id}`, {
+            headers: {
+                Authorization: `Client-ID ${this._accessKey}`
+            }
+        })
+            .then(Api.getResponse)
+            .then(Api.transformPhotoData)
     }
 }
 
@@ -18,5 +45,4 @@ const config = {
     accessKey: 'H8gh9bhvCQeiUeVQO_-zAUTxVfDCbOAbpb_rt45z50c',
 }
 
-const api = new Api(config);
-export default api;
+export const api = new Api(config);
