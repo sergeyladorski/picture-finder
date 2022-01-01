@@ -3,6 +3,7 @@
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  text-decoration: none;
 }
 
 .card__image {
@@ -15,7 +16,8 @@
 
 .card__title {
   margin: 0;
-  font-weight: 400;
+  font-weight: 500;
+  color: black;
   font-size: 14px;
   line-height: 1.21;
   text-align: left;
@@ -27,9 +29,10 @@
 
 .card__subtitle {
   margin: 0;
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: 400;
+  font-size: 14px;
   line-height: 1.21;
+  color: black;
   text-align: left;
   text-overflow: ellipsis;
   white-space: nowrap;

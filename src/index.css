@@ -1,4 +1,5 @@
 @import url(./vendor/normalize.css);
+@import url(./vendor/fonts/fonts.css);
 
 @import url(./blocks/page/page.css);
 @import url(./blocks/input/input.css);
@@ -8,3 +9,5 @@
 @import url(./blocks/loader/loader.css);
 @import url(./blocks/footer/footer.css);
 @import url(./blocks/footer/__copyright/footer__copyright.css);
+@import url(./blocks/photo/photo.css);
+@import url(./blocks/notfound/notfound.css);
