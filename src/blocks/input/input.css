@@ -1,0 +1,15 @@
+.input {
+  width: 340px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 1000px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.23;
+  text-indent: 20px;
+  border: none;
+  padding: 3px;
+  box-shadow:
+    inset 10px 0 20px #9b9999,
+    inset -10px 0 20px #d8d3d3;
+}
