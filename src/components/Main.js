@@ -1,10 +1,9 @@
 import { useState, useContext } from 'react';
 import { CardContext } from '../context/CardContext';
-
-import {Input} from './Input';
-import {Button} from './Button';
-import {Card} from './Card';
-import {Loader} from './Loader';
+import { Input } from './Input';
+import { Button } from './Button';
+import { Card } from './Card';
+import { Loader } from './Loader';
 
 export const Main = ({
     onSubmit,
@@ -26,7 +25,7 @@ export const Main = ({
     return (
         <div className='content'>
             <form className='search' onSubmit={handleFormSubmit}>
-                <Input placeholder='Search high-resolution photos for free'
+                <Input placeholder='Search high-resolution photos'
                     onChange={handleInputChange}
                     value={value}
                 />
