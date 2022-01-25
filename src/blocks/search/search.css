@@ -1,0 +1,13 @@
+.search {
+  display: flex;
+  gap: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .search {
+    box-sizing: border-box;
+    padding-bottom: 40px;
+    gap: 5%;
+    border-bottom: 1px solid rgba(101, 104, 112, 0.6); 
+  }
+}

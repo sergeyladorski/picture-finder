@@ -11,15 +11,23 @@
   margin: 0;
   padding: 0;
   background: linear-gradient(#4b4b4b, #111111);
-  box-shadow:
-    inset 20px 0 20px #171717,
-    inset -10px 0 30px #494949;
+  box-shadow: inset 20px 0 20px #171717, inset -10px 0 30px #494949;
   border: none;
   cursor: pointer;
 }
 
 .button:hover {
-  box-shadow:
-    inset 20px 0 20px rgba(255, 255, 255, 0.6),
-    inset -10px 0 30px rgba(255, 255, 255, 1);
+  transition: 0.3s;
+  box-shadow: inset 20px 0 20px #171717,
+    inset 0px 0 40px #949494;
+  border: 1px solid #a7a7a7;
+}
+
+@media screen and (max-width: 767px) {
+  .button {
+    width: 25%;
+    height: 40px;
+    font-size: 16px;
+    align-self: flex-end;
+  }
 }

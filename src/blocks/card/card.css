@@ -1,9 +1,19 @@
 .card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   background-color: #ffffff;
   border-radius: 10px;
+  border: 1px solid rgba(101, 104, 112, 0.6);
+  box-shadow: 5px 5px 10px 0px rgb(0 0 0);
   overflow: hidden;
   position: relative;
+  color: #202020;
   text-decoration: none;
+}
+.card:hover {
+  transform: scale(1.02);
+  transition: 0.3s;
 }
 
 .card__image {
@@ -12,19 +22,37 @@
   height: 282px;
   object-fit: cover;
   cursor: pointer;
+  box-shadow: 0px 0px 10px 0px rgb(0 0 0);
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .card__image {
+    height: calc((90vw - 34px) / 3);
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .card__image {
+    height: calc((90vw - 17px) / 2);
+  }
+}
+
+.card__description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 15px;
+  padding-right: 21px;
+  margin-bottom: 10px;
 }
 
 .card__title {
   margin: 0;
   font-weight: 500;
-  color: black;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.21;
   text-align: left;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  padding: 10px 15px 0px 21px;
 }
 
 .card__subtitle {
@@ -32,10 +60,8 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 1.21;
-  color: black;
   text-align: left;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  padding: 10px 15px 10px 21px;
 }

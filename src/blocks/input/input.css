@@ -1,15 +1,25 @@
 .input {
   width: 340px;
   height: 50px;
-  margin-right: 10px;
+  box-sizing: border-box;
   border-radius: 1000px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.23;
   text-indent: 20px;
   border: none;
-  padding: 3px;
-  box-shadow:
-    inset 10px 0 20px #9b9999,
-    inset -10px 0 20px #d8d3d3;
+  padding: 0;
+  box-shadow: inset 10px 0 20px #9b9999, inset -10px 0 20px #000000;
+}
+.input:hover {
+  box-shadow: inset 10px 0 20px #000000, inset -10px 0 20px #575757;
+  transition: 0.7s;
+}
+
+@media screen and (max-width: 767px) {
+  .input {
+    width: 70%;
+    height: 40px;
+    font-size: 16px;
+  }
 }
