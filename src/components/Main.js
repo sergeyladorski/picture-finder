@@ -1,6 +1,5 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { CardContext } from '../context/CardContext';
-import { useContext } from 'react';
 
 import {Input} from './Input';
 import {Button} from './Button';
@@ -26,7 +25,7 @@ export const Main = ({
 
     return (
         <div className='content'>
-            <form className='Search' onSubmit={handleFormSubmit}>
+            <form className='search' onSubmit={handleFormSubmit}>
                 <Input placeholder='Search high-resolution photos for free'
                     onChange={handleInputChange}
                     value={value}

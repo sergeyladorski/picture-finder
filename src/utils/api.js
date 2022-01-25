@@ -18,11 +18,10 @@ class Api {
             alt: item.alt_description
         }
     }
-
     search(searchQuery) {
-        return fetch(`${this._baseUrl}/search/photos?query=${searchQuery}`, {
+        return fetch(`${this._baseUrl}/search/photos?page=1&per_page=12&query=${searchQuery}`, {
             headers: {
-                Authorization: `Client-ID ${this._accessKey}`
+                Authorization: `Client-ID ${this._accessKey}`,
             }
         })
             .then(Api.getResponse)

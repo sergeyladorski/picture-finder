@@ -4,11 +4,35 @@
   padding-bottom: 50px;
 }
 
+@media screen and (max-width: 424px) {
+  .gallery {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(101, 104, 112, 0.6);
+  }
+}
+
 .gallery__list {
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(4, calc((100% - 40px) / 4));
+  grid-template-columns: repeat(3, calc((100% - 40px) / 3));
   gap: 20px 17px;
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .gallery__list {
+    grid-template-columns: repeat(2, calc((100% - 17px) / 2));
+    gap: 20px 17px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .gallery__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
 }

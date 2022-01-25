@@ -1,29 +1,56 @@
 .photo {
   max-width: 860px;
-  margin: 18px auto;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .photo__go-back {
+  margin-bottom: 18px;
+  display: inline-block;
+  color: #202020;
   font-size: 14px;
-  color: #767676;
   text-decoration: underline;
+}
+.photo__go-back:hover {
+  opacity: 0.6;
+  transition: 0.3s;
+}
+@media screen and (max-width: 767px) {
+  .photo__go-back {
+    padding-left: 15px;
+  }
 }
 
 .photo__image {
-  display: block;
   max-width: 100%;
   max-height: 75vh;
-  margin-top: 18px;
+  margin-bottom: 20px;
+  display: block;
+  align-self: center;
+}
+
+.photo__description {
+  margin-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 21px;
+  display: flex;
+  flex-direction: column;
 }
 
 .photo__title {
+  margin: 0;
+  color: #202020;
   font-weight: 500;
-  margin-top: 20px;
-  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.21;
 }
 
 .photo__subtitle {
+  margin: 0;
+  color: #494949;
   font-weight: 400;
-  color: #767676;
-  margin-top: 5px;
+  font-size: 14px;
+  line-height: 1.21;
 }

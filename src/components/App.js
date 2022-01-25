@@ -25,26 +25,26 @@ function App() {
 
   return (
     <CardContext.Provider value={data}>
-      <Switch>
-        <Route exact path='/'>
-          <div className='page'>
+      <div className='page'>
+        <Switch>
+          <Route exact path='/'>
             <Main
               onSubmit={onSubmit}
               initialValue={searchQuery}
               isLoading={loading}
             />
             <Footer />
-          </div>
-        </Route>
+          </Route>
 
-        <Route path='/photos/:photoId'>
-          <Photo />
-        </Route>
+          <Route path='/photos/:photoId'>
+            <Photo />
+          </Route>
 
-        <Route path='*'>
-          <NotFound />
-        </Route>
-      </Switch>
+          <Route path='*'>
+            <NotFound />
+          </Route>
+        </Switch>
+      </div>
     </CardContext.Provider>
   );
 }
