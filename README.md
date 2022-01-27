@@ -38,7 +38,7 @@
 
 - Настроить выдачу большего числа результатов с пагинацией.
 
-Перейти на [страницу проекта](https://sergeyladorski.github.io/picture-finder/)).  
-Больше моих проектов на [GitHub](https://github.com/sergeyladorski)).
+Перейти на [страницу проекта](https://sergeyladorski.github.io/picture-finder/).  
+Больше моих проектов на [GitHub](https://github.com/sergeyladorski).
 
 **Sergey Ladorski**
