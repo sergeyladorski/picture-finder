@@ -12,7 +12,7 @@ import { NotFound } from './NotFound'
 
 function App() {
 
-  const [searchQuery, setSearchQuery] = React.useState('');
+  const [searchQuery, setSearchQuery] = React.useState('Parrot');
   const [isFirstRender, setIsFirstRender] = React.useState(true);
 
   const handler = React.useCallback(() => {
