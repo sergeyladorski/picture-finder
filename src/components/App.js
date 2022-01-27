@@ -12,7 +12,8 @@ import { NotFound } from './NotFound'
 
 function App() {
 
-  const [searchQuery, setSearchQuery] = React.useState('Hogwarts');
+  const [searchQuery, setSearchQuery] = React.useState('');
+  const [isFirstRender, setIsFirstRender] = React.useState(true);
 
   const handler = React.useCallback(() => {
     return api.search(searchQuery);
@@ -21,6 +22,7 @@ function App() {
 
   const onSubmit = (valueMain) => {
     setSearchQuery(valueMain);
+    setIsFirstRender(false)
   };
 
   return (
@@ -31,6 +33,7 @@ function App() {
             <Main
               onSubmit={onSubmit}
               initialValue={searchQuery}
+              isFirstRender={isFirstRender}
               isLoading={loading}
             />
             <Footer />

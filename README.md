@@ -26,6 +26,7 @@
 
 - HTML;
 - CSS;
+- BEM Nested;
 - ReactJS;
 - ReactHooks;
 - ReactRouter;

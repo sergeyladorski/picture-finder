@@ -1,0 +1,13 @@
+.photo__description {
+  box-sizing: border-box;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (max-width: 767px) {
+  .photo__description {
+    padding-left: 15px;
+    padding-right: 21px;
+  }
+}
