@@ -8,7 +8,8 @@ import { Loader } from './Loader';
 export const Main = ({
     onSubmit,
     isLoading,
-    initialValue
+    initialValue,
+    isFirstRender
 }) => {
     const [value, setValue] = useState(initialValue);
     const cards = useContext(CardContext);
@@ -29,23 +30,29 @@ export const Main = ({
                     onChange={handleInputChange}
                     value={value}
                 />
-                <Button type='submit' text='Search' />
+                <Button text='Search' value={value}/>
             </form>
 
             {isLoading
                 ? <Loader />
                 : (
                     <section className='gallery'>
-                        <ul aria-label='фото-галерея' className='gallery__list'>
-                            {
-                                cards.map((item) =>
-                                    <Card
-                                        key={item.id}
-                                        {...item}
-                                    />
-                                )
-                            }
-                        </ul>
+                        {cards.length === 0
+                            ? (!isFirstRender && <h2 className='gallery__no-results'>
+                                No search results found
+                            </h2>)
+
+                            : <ul aria-label='фото-галерея' className='gallery__list'>
+                                {
+                                    cards.map((item) =>
+                                        <Card
+                                            key={item.id}
+                                            {...item}
+                                        />
+                                    )
+                                }
+                            </ul>
+                        }
                     </section>
                 )
             }

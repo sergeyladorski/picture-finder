@@ -1,15 +1,39 @@
+/*vendor*/
 @import url(./vendor/normalize.css);
 @import url(./vendor/fonts/fonts.css);
-
+/*page*/
 @import url(./blocks/page/page.css);
+/*content*/
 @import url(./blocks/content/content.css);
+/*search*/
 @import url(./blocks/search/search.css);
 @import url(./blocks/input/input.css);
 @import url(./blocks/button/button.css);
+@import url(./blocks/button/_disabled/button_disabled.css);
+/*gallery*/
 @import url(./blocks/gallery/gallery.css);
+@import url(./blocks/gallery/__list/gallery__list.css);
+/*card*/
 @import url(./blocks/card/card.css);
+@import url(./blocks/card/__image/card__image.css);
+@import url(./blocks/card/__description/card__description.css);
+@import url(./blocks/card/__title/card__title.css);
+@import url(./blocks/card/__subtitle/card__subtitle.css);
+/*loader*/
 @import url(./blocks/loader/loader.css);
+/*footer*/
 @import url(./blocks/footer/footer.css);
 @import url(./blocks/footer/__copyright/footer__copyright.css);
+/*photo*/
 @import url(./blocks/photo/photo.css);
-@import url(./blocks/notfound/notfound.css);
+@import url(./blocks/photo/__go-back/photo__go-back.css);
+@import url(./blocks/photo/__image/photo__image.css);
+@import url(./blocks/photo/__description/photo__description.css);
+@import url(./blocks/photo/__title/photo__title.css);
+@import url(./blocks/photo/__subtitle/photo__subtitle.css);
+/*not-fount*/
+@import url(./blocks/not-found/not-found.css);
+@import url(./blocks/not-found/__image/not-found__image.css);
+@import url(./blocks/not-found/__title/not-found__title.css);
+@import url(./blocks/not-found/__text/not-found__text.css);
+@import url(./blocks/not-found/__link/not-found__link.css);

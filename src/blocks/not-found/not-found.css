@@ -1,11 +1,13 @@
-.page {
+.not-found {
   min-width: 320px;
   width: 100%;
   min-height: 100vh;
-  position: relative;
-  color: #ffffff;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #202020;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-style: normal;
   -moz-osx-font-smoothing: grayscale;
@@ -16,27 +18,27 @@
   text-rendering: optimizeLegibility;
 }
 @media screen and (min-width: 1280px) {
-  .page {
+  .not-found {
     min-width: 1280px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .page {
+  .not-found {
     min-width: 1024px;
   }
 }
 @media screen and (min-width: 768px) {
-  .page {
+  .not-found {
     min-width: 768px;
   }
 }
 @media screen and (min-width: 425px) {
-  .page {
+  .not-found {
     min-width: 425px;
   }
 }
 @media screen and (min-width: 320px) {
-  .page {
+  .not-found {
     min-width: 320px;
   }
 }
